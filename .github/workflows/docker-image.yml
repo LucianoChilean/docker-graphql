@@ -29,10 +29,12 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t ironluc/docker-graphql:0.0.2 .
+        docker build -t ironluc/docker-graphql:latest .
 
     - name: Push Docker image
       run: |
         docker push ironluc/docker-graphql:0.0.2
+        docker push ironluc/docker-graphql:latest
         
 #    - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
